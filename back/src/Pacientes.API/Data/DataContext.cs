@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Pacientes.API.Models;
 
 public class DataContext : DbContext{
-    public DbSet<Paciente> Pacientes {get; set;}
+    public DbSet<Paciente> Pacientes => Set<Paciente>();
 
     public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
